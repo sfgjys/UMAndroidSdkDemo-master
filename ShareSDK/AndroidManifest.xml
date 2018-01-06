@@ -1,10 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 
-          package="com.umeng.socialize.lib"
->
+    package="com.umeng.socialize.lib">
 
-    <application
-    >
+    <application>
 
     </application>
 
