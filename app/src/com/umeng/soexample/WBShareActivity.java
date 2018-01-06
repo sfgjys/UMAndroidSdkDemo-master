@@ -1,11 +1,9 @@
 package com.umeng.soexample;
 
-//import com.umeng.socialize.media.WBShareCallBackActivity;
-
 import com.umeng.socialize.media.WBShareCallBackActivity;
 
 /**
- * Created by wangfei on 15/12/3.
+ * 类的描述: 新浪微博精简版，添加的回调Activity，在包名路径下命名为WBShareActivity
  */
 public class WBShareActivity extends WBShareCallBackActivity {
 }

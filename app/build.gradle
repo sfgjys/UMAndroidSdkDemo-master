@@ -10,24 +10,28 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    // 注意： 签名文件如果不加，部分平台的授权会受到影响。
     buildTypes {
         debug {
             minifyEnabled false
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.debug// debug模式下使用signingConfigs配置中叫“debug”的配置
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         release {
             minifyEnabled false
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.debug// release模式下使用signingConfigs配置中叫“debug”的配置
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         libcom {
             minifyEnabled false
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.debug// libcom模式下使用signingConfigs配置中叫“debug”的配置
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    signingConfigs {
+
+    signingConfigs {// 配置签名文件的信息
+        // debug 是签名文件的自定义变量名
         debug {
             storeFile file('debug.keystore')
             storePassword "android"

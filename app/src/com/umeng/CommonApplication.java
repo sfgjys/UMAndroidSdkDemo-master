@@ -13,16 +13,16 @@ public class CommonApplication extends Application {
 
         super.onCreate();
 
-        //设置LOG开关，默认为false
-
+        //设置友盟组件的LOG日志的开关，默认为false
         UMConfigure.setLogEnabled(true);
-        //初始化组件化基础库, 统计SDK/推送SDK/分享SDK都必须调用此初始化接口 
-        UMConfigure.init(this, "59892f08310c9307b60023d0", "Umeng", UMConfigure.DEVICE_TYPE_PHONE, "669c30a9584623e70e8cd01b0381dcb4");
+        //初始化组件化基础库, 统计SDK/推送SDK/分享SDK都必须调用此初始化接口
+        // 参数二 友盟APP_KEY  参数二 渠道名称(分享可以不用)  参数三是类型  参数四是推送用的可以为""
+        UMConfigure.init(this, "59892f08310c9307b60023d0", "Umeng", UMConfigure.DEVICE_TYPE_PHONE, "");
         //开启ShareSDK debug模式，方便定位错误，具体错误检查方式可以查看http://dev.umeng.com/social/android/quick-integration的报错必看，正式发布，请关闭该模式
         Config.DEBUG = true;
     }
 
-    //各个平台的配置，建议放在全局Application或者程序入口
+    //各个平台的配置 配置三方平台的appkey：，建议放在全局Application或者程序入口
     static {
         PlatformConfig.setWeixin("wxdc1e388c3822c80b", "3baf1193c85774b3fd9d18447d76cab0");
         //豆瓣RENREN平台目前只能在服务器端配置
@@ -37,6 +37,5 @@ public class CommonApplication extends Application {
         PlatformConfig.setDing("dingoalmlnohc0wggfedpk");
         PlatformConfig.setVKontakte("5764965", "5My6SNliAaLxEm3Lyd9J");
         PlatformConfig.setDropbox("oz8v5apet3arcdy", "h7p2pjbzkkxt02a");
-
     }
 }
