@@ -55,5 +55,4 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':ShareSDK')
-    compile files('libs/umerror_android_1.0.0.jar')
 }
